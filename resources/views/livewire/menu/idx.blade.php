@@ -1,0 +1,10 @@
+<div>
+    @if(Auth::user()->hasRole('staff'))
+        @if(Browser::isMobile())
+            <livewire:menu.staff-mobile>
+        @else
+            <livewire:menu.staff-mobile>
+            <livewire:menu.staff>
+        @endif
+    @endif
+</div>
